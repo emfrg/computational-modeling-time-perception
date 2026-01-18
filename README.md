@@ -1,6 +1,4 @@
-# Thesis Repository [WIP]
-
-_Note: This repository is a Work-In-Progress._
+# Thesis Repository
 
 #### Paper
 
