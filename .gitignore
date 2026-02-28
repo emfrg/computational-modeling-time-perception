@@ -218,3 +218,8 @@ pyrightconfig.json
 *.swo
 *~
 
+
+
+# my stuff
+
+my_stuff/
