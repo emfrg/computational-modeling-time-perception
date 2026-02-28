@@ -223,3 +223,4 @@ pyrightconfig.json
 # my stuff
 
 my_stuff/
+.claude/

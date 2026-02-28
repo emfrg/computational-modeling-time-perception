@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python -c \":*)",
+      "Bash(.venv/bin/python:*)",
+      "Bash(.venv/bin/jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=300 analysis/simulation_analysis.ipynb --output simulation_analysis_executed.ipynb)",
+      "Bash(jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=300 analysis/data_analysis_pipeline.ipynb --output data_analysis_pipeline_executed.ipynb)",
+      "Bash(jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=300 analysis/data_analysis_pipeline.ipynb --output /tmp/current_executed.ipynb)",
+      "Bash(/tmp/port_all_viz.py:*)",
+      "Bash(jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=300 analysis/data_analysis_pipeline.ipynb --output /tmp/test_executed.ipynb)",
+      "Bash(/tmp/fix_agg.py:*)",
+      "Bash(git checkout -- analysis/data_analysis_pipeline.ipynb)",
+      "Bash(jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=300 analysis/data_analysis_pipeline.ipynb --output /tmp/test_exec.ipynb)",
+      "Read(//dev/**)",
+      "Bash(jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=300 analysis/data_analysis_pipeline.ipynb --output /tmp/verify_73.ipynb)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}
