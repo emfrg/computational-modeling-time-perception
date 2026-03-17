@@ -1,15 +1,17 @@
 # Losing Track of Time
 
-Computational cognitive modeling of prospective timing under sequential multitasking.
+*Computational cognitive modeling of prospective timing under sequential multitasking.*
+
+---
 
 This repository contains the code, data, and analysis for the [MSc thesis](https://studenttheses.uu.nl/handle/20.500.12932/50349) by Emmanuel Fragkiadakis (Utrecht University, 2025). It includes a behavioral experiment (built with PsychoPy), a prototype cognitive model inspired by ACT-R (written in Python), the data used for the analysis and the analysis notebooks.
 
 #### Code
 
-- Behavioral study code: [`/experiment`](./experiment)
-- Cognitive model code: [`/model`](./model)
-- Data used in the study: [`/data`](./data)
-- Analysis notebooks: [`/analysis`](./analysis)
+- Behavioral experiment: `[/experiment](./experiment)`
+- Cognitive model: `[/model](./model)`
+- Data used in the study: `[/data](./data)`
+- Statistical analysis & model fitting: `[/analysis](./analysis)`
 
 ## Experiment
 
@@ -60,22 +62,20 @@ This project requires **Python 3.10** specifically to ensure compatibility with 
 #### macOS
 
 1. **Using Homebrew (recommended):**
-
-   ```bash
+  ```bash
    brew install python@3.10
-   ```
-
+  ```
 2. **Using official installer:**
-   - Download Python 3.10 from [python.org](https://www.python.org/downloads/release/python-31011/)
-   - Run the installer package
-   - Verify installation: `python3.10 --version`
+  - Download Python 3.10 from [python.org](https://www.python.org/downloads/release/python-31011/)
+  - Run the installer package
+  - Verify installation: `python3.10 --version`
 
 #### Windows
 
 1. Download Python 3.10 from [python.org](https://www.python.org/downloads/release/python-31011/)
 2. Run the installer
-   - **Important:** Check "Add Python 3.10 to PATH"
-   - Select "Install Now" or customize as needed
+  - **Important:** Check "Add Python 3.10 to PATH"
+  - Select "Install Now" or customize as needed
 3. Verify installation by opening Command Prompt: `python --version`
 
 ## Environment Setup
@@ -85,42 +85,32 @@ This project requires **Python 3.10** specifically to ensure compatibility with 
 #### macOS
 
 1. **Create virtual environment:**
-
-   ```bash
+  ```bash
    python3.10 -m venv .venv
-   ```
-
+  ```
 2. **Activate virtual environment:**
-
-   ```bash
+  ```bash
    source .venv/bin/activate
-   ```
-
+  ```
 3. **Install dependencies (excl. PsychoPy):**
-
-   ```bash
+  ```bash
    pip install -r requirements.txt
-   ```
+  ```
 
 #### Windows
 
 1. **Create virtual environment:**
-
-   ```cmd
+  ```cmd
    python -m venv .venv
-   ```
-
+  ```
 2. **Activate virtual environment:**
-
-   ```cmd
+  ```cmd
    .venv\Scripts\activate
-   ```
-
+  ```
 3. **Install dependencies (excl. PsychoPy):**
-
-   ```cmd
+  ```cmd
    pip install -r requirements.txt
-   ```
+  ```
 
 **Deactivate when done:**
 
@@ -154,23 +144,19 @@ You can also choose to create a new virtual environment with Python 3.10 or run 
 Assuming you are still inside the .venv virtual environment:
 
 1. **Navigate to experiment directory:**
-
-   ```bash
+  ```bash
    cd experiment
-   ```
-
+  ```
 2. **Install PsychoPy:**
-
-   ```bash
+  ```bash
    pip install psychopy
-   ```
-
+  ```
 3. **Run the experiment:**
-   ```bash
+  ```bash
    python multitasking_experiment.py
-   ```
+  ```
 
-_Note: The terminal or IDE may require input monitoring permission on macOS._
+*Note: The terminal or IDE may require input monitoring permission on macOS.*
 
 ### Alternative Method (if installation issues occur)
 
@@ -183,10 +169,12 @@ If you encounter problems with the command-line installation of PsychoPy:
 
 ## Data Analysis
 
-| Notebook                    | Description                                                                                                                                  | Colab                                                                                                                                                                                                            |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `experiment_analysis.ipynb` | Preprocessing, descriptive statistics, 2x2 RM-ANOVAs for task performance and time perception, scalar property and central tendency analyses | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emfrg/computational-modeling-time-perception/blob/main/analysis/experiment_analysis.ipynb) |
-| `simulation_analysis.ipynb` | Single-task simulations, multitasking simulations, model fitting, 2x2 RM-ANOVAs on simulated data                                            | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emfrg/computational-modeling-time-perception/blob/main/analysis/simulation_analysis.ipynb) |
+
+| Notebook                    | Description                                                                                                                                  | Colab                                                                                                                                               |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `experiment_analysis.ipynb` | Preprocessing, descriptive statistics, 2x2 RM-ANOVAs for task performance and time perception, scalar property and central tendency analyses | [Open In Colab](https://colab.research.google.com/github/emfrg/computational-modeling-time-perception/blob/main/analysis/experiment_analysis.ipynb) |
+| `simulation_analysis.ipynb` | Single-task simulations, multitasking simulations, model fitting, 2x2 RM-ANOVAs on simulated data                                            | [Open In Colab](https://colab.research.google.com/github/emfrg/computational-modeling-time-perception/blob/main/analysis/simulation_analysis.ipynb) |
+
 
 ## Support
 
@@ -196,7 +184,7 @@ For issues or questions, please contact the researcher Emmanuel Fragkiadakis at 
 
 If you use this code or data in your research, please cite:
 
-Fragkiadakis, E. (2025). _Losing track of time: Computational cognitive modeling of prospective timing under sequential multitasking_ [Master’s thesis, Utrecht University]. Utrecht University Student Theses Repository. https://studenttheses.uu.nl/handle/20.500.12932/50349
+Fragkiadakis, E. (2025). *Losing track of time: Computational cognitive modeling of prospective timing under sequential multitasking* [Master’s thesis, Utrecht University]. Utrecht University Student Theses Repository. [https://studenttheses.uu.nl/handle/20.500.12932/50349](https://studenttheses.uu.nl/handle/20.500.12932/50349)
 
 ### BibTeX:
 
@@ -211,3 +199,4 @@ Fragkiadakis, E. (2025). _Losing track of time: Computational cognitive modeling
   note={Code and data available at: \url{https://github.com/emfrg/computational-modeling-time-perception}}
 }
 ```
+
