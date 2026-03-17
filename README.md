@@ -4,20 +4,20 @@
 
 ---
 
-This repository contains the code, data, and analysis for the [MSc thesis](https://studenttheses.uu.nl/handle/20.500.12932/50349) by Emmanuel Fragkiadakis (Utrecht University, 2025). It includes a behavioral experiment (built with PsychoPy), a prototype cognitive model inspired by ACT-R (written in Python), the data used for the analysis and the analysis notebooks.
+This repository contains the code, data, and analysis for the [Research Paper](https://studenttheses.uu.nl/handle/20.500.12932/50349) by Emmanuel Fragkiadakis (Utrecht University, 2025). It includes a behavioral experiment (built with PsychoPy), a prototype cognitive model inspired by ACT-R (written in Python), the data used for the analysis and the analysis notebooks.
 
 #### Code
 
-- Behavioral experiment: `[/experiment](./experiment)`
-- Cognitive model: `[/model](./model)`
-- Data used in the study: `[/data](./data)`
-- Statistical analysis & model fitting: `[/analysis](./analysis)`
+- Behavioral experiment: [/experiment](./experiment)
+- Cognitive model: [/model](./model)
+- Data used in the study: [/data](./data)
+- Statistical analysis & model fitting: [/analysis](./analysis)
 
 ## Experiment
 
 The study uses a 2×2 within-subjects design crossing interruption condition (interrupted vs. sequential) with cognitive load (1-back vs. 2-back). Participants type words on an alphabetical virtual keyboard — the word disappears after the first letter, loading working memory — while a digit N-back task serves as the secondary task. In the interrupted condition the N-back interrupts the typing mid-word; in the sequential condition the two tasks are performed one after the other. After each trial participants give a verbal time estimate via a slider.
 
-For details on the experimental design and stimuli see the [thesis](https://studenttheses.uu.nl/handle/20.500.12932/50349).
+For details on the experimental design and stimuli see the [Paper](https://studenttheses.uu.nl/handle/20.500.12932/50349).
 
 ## Cognitive Model
 
@@ -29,7 +29,7 @@ Key mechanisms:
 - **Production competition.** Cognitive operations (typing, N-back matching, time checking) compete for a serial processing bottleneck. Under higher cognitive load, the timing production fires less often, causing pulses to be overwritten before encoding — leading to systematic underestimation.
 - **Task switching costs.** Interruptions add reconfiguration overhead that further delays time-checking, amplifying underestimation beyond the effect of cognitive load alone.
 
-For a full description see the [thesis](https://studenttheses.uu.nl/handle/20.500.12932/50349).
+For a full description see the [Paper](https://studenttheses.uu.nl/handle/20.500.12932/50349).
 
 ## Table of Contents
 
