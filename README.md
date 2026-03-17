@@ -1,15 +1,33 @@
-# Thesis Repository
+# Losing Track of Time
 
-#### Paper
+Computational cognitive modeling of prospective timing under sequential multitasking.
 
-https://studenttheses.uu.nl/handle/20.500.12932/50349
+This repository contains the code, data, and analysis for the [MSc thesis](https://studenttheses.uu.nl/handle/20.500.12932/50349) by Emmanuel Fragkiadakis (Utrecht University, 2025). It includes a behavioral experiment (built with PsychoPy), a prototype cognitive model inspired by ACT-R (written in Python), the data used for the analysis and the analysis notebooks.
 
 #### Code
-- Behavioral study code: [`/experiment`](./experiment).
-- Cognitive model code: [`/model`](./model).
-- Data used in the study: [`/data`](./data).
-- Data analysis code: coming soon.
 
+- Behavioral study code: [`/experiment`](./experiment)
+- Cognitive model code: [`/model`](./model)
+- Data used in the study: [`/data`](./data)
+- Analysis notebooks: [`/analysis`](./analysis)
+
+## Experiment
+
+The study uses a 2×2 within-subjects design crossing interruption condition (interrupted vs. sequential) with cognitive load (1-back vs. 2-back). Participants type words on an alphabetical virtual keyboard — the word disappears after the first letter, loading working memory — while a digit N-back task serves as the secondary task. In the interrupted condition the N-back interrupts the typing mid-word; in the sequential condition the two tasks are performed one after the other. After each trial participants give a verbal time estimate via a slider.
+
+For details on the experimental design and stimuli see the [thesis](https://studenttheses.uu.nl/handle/20.500.12932/50349).
+
+## Cognitive Model
+
+The model is a prototype cognitive architecture for prospective timing under task interruptions. It integrates a reimplementation of the timing module by Taatgen et al. (2007) into the interruptions model of Borst et al. (2015), building on ACT-R's modular design and central production system (Anderson et al., 2004).
+
+Key mechanisms:
+
+- **Pacemaker–accumulator timing.** An independent pacemaker emits pulses into a temporal buffer. A `CheckBuffer` production reads and encodes them into a subjective duration.
+- **Production competition.** Cognitive operations (typing, N-back matching, time checking) compete for a serial processing bottleneck. Under higher cognitive load, the timing production fires less often, causing pulses to be overwritten before encoding — leading to systematic underestimation.
+- **Task switching costs.** Interruptions add reconfiguration overhead that further delays time-checking, amplifying underestimation beyond the effect of cognitive load alone.
+
+For a full description see the [thesis](https://studenttheses.uu.nl/handle/20.500.12932/50349).
 
 ## Table of Contents
 
@@ -29,8 +47,8 @@ https://studenttheses.uu.nl/handle/20.500.12932/50349
 First, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/emfrg/multitasking-n-time-perception-study.git
-cd multitasking-n-time-perception-study
+git clone https://github.com/emfrg/computational-modeling-time-perception.git
+cd computational-modeling-time-perception
 ```
 
 ## Prerequisites
@@ -103,11 +121,12 @@ This project requires **Python 3.10** specifically to ensure compatibility with 
    ```cmd
    pip install -r requirements.txt
    ```
-   
+
 **Deactivate when done:**
-   ```bash
-   deactivate
-   ```
+
+```bash
+deactivate
+```
 
 ## Running Model Simulations
 
@@ -164,7 +183,10 @@ If you encounter problems with the command-line installation of PsychoPy:
 
 ## Data Analysis
 
-_TODO: Data analysis scripts will be added in future updates._
+| Notebook                    | Description                                                                                                                                  | Colab                                                                                                                                                                                                            |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `experiment_analysis.ipynb` | Preprocessing, descriptive statistics, 2x2 RM-ANOVAs for task performance and time perception, scalar property and central tendency analyses | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emfrg/computational-modeling-time-perception/blob/main/analysis/experiment_analysis.ipynb) |
+| `simulation_analysis.ipynb` | Single-task simulations, multitasking simulations, model fitting, 2x2 RM-ANOVAs on simulated data                                            | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emfrg/computational-modeling-time-perception/blob/main/analysis/simulation_analysis.ipynb) |
 
 ## Support
 
@@ -186,6 +208,6 @@ Fragkiadakis, E. (2025). _Losing track of time: Computational cognitive modeling
   school={Utrecht University},
   type={Master's thesis},
   url={https://studenttheses.uu.nl/handle/20.500.12932/50349},
-  note={Code and data available at: \url{https://github.com/emfrg/multitasking-n-time-perception-study}}
+  note={Code and data available at: \url{https://github.com/emfrg/computational-modeling-time-perception}}
 }
 ```
